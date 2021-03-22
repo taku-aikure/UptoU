@@ -1,0 +1,31 @@
+<%= render "shared/just_logo" %>
+
+<%= form_with model: @user, url: user_session_path, class: "sign-up-form", local: true do |f| %>
+<div class='area'>
+  <div class='sign-up-heading'>
+    <h1 class='#'>
+      sign in
+    </h1>
+  </div>
+
+  <%#= render 'shared/error_messages', model: f.object %>
+   <div class="input-things">
+     <div class="form-things">
+       <label class="thing">Mail</label>
+     </div>
+     <%= f.email_field :email, class:"input-form", id:"#", placeholder:"PC・携帯どちらでも可", autofocus: true %>
+   </div>
+    <div class="input-things">
+      <div class="form-things">
+       <label class="thing">Password</label>
+      </div>
+     <%= f.password_field :password, class:"input-form", id:"#", placeholder:"８文字以上の半角英数字" %>
+    </div>
+
+   <div class='sign-up-bottun'>
+     <%= f.submit "Sign in",class:"sign-up-letter" %>
+    </div>
+</div>
+<% end %>
+
+<%= render "shared/just_logo" %>
