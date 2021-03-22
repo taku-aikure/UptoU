@@ -1,0 +1,113 @@
+.contents {
+  background-image: image-url('top.jpeg');
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 5vh 15vw;
+  opacity: 0.8;
+  transition: .3s;
+  position: relative;
+}
+
+
+.contents:hover {
+  opacity: 1;
+
+}
+
+.contents p {
+  font-size: 80px;
+  opacity: 1;
+  color: rgb(248, 215, 232);
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  margin:0;
+  padding:0;
+  position: absolute;
+  font-family: 'Caveat', cursive;
+}
+
+
+.function {
+  display: flex;
+}
+
+.runway_catch {
+  position: relative;
+}
+
+.runway_catch p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  margin:0;
+  padding:0;
+  font-family: 'Caveat', cursive;
+  font-size: 30px;
+}
+
+.image_ranway {
+  width: 35vw;
+  height: 40vh;
+  opacity: 0.5;
+  transition: .3s;
+}
+
+.image_ranway:hover {
+  opacity: 1;
+}
+
+.calender {
+  width: 30vw;
+  background-color: coral;
+  height: 40vh;
+  opacity: 0.5;
+  transition: .3s;
+  position: relative;
+}
+
+.calender:hover {
+  opacity: 1;
+}
+
+.wardrobe_catch {
+  position: relative;
+}
+
+.wardrobe_catch p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  margin:0;
+  padding:0;
+  font-family: 'Caveat', cursive;
+  font-size: 30px;
+}
+
+.image_wardrobe {
+  width: 35vw;
+  height: 40vh;
+  opacity: 0.5;
+  transition: .3s;
+}
+
+.image_wardrobe:hover {
+  opacity: 1;
+}
+
+

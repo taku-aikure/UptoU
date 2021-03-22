@@ -1,0 +1,32 @@
+<%= render "shared/header" %>
+
+    <div class='main'>
+
+      <div class="contents">
+        <div class="first-view">
+        <p >Everything is up to you</p>
+        
+        
+        </div>
+        <div class="upper-content">
+        </div>
+        <div class="middle-content">
+        </div>
+      </div>
+
+        <div class="function">
+          <div class = "runway_catch">
+            <%= link_to image_tag("runway.jpeg", class:"image_ranway"), "#" %>
+            <p>Runway!</p>
+          </div>
+            <div class = "calender_catch">
+            <div class = "calender">カレンダー</div>
+          </div>
+          <div class = "wardrobe_catch">
+            <%= link_to image_tag("wardrobe.jpeg", class:"image_wardrobe"), "#" %>
+            <p>Wardrobe!</p>
+          </div>
+        </div>
+    </div>
+    <%= render "shared/just_logo" %>
+</html>

@@ -1,0 +1,60 @@
+<%= render "shared/just_logo" %>
+
+<%= form_with model: @user, url: user_registration_path, class: "sign-up-form", local: true do |f| %>
+<div class='area'>
+  <div class='sign-up-heading'>
+    <h1 class='#'>
+      Sign up
+    </h1>
+  </div>
+
+  <%#= render 'shared/error_messages', model: f.object %>
+    <div class="input-things">
+      <div class="form-things">
+        <label class="thing">Nickname</label>
+      </div>
+      <%= f.text_area :nickname, class:"input-form", id:"#", placeholder:"例) 太郎", maxlength:"40" %>
+    </div>
+   <div class="input-things">
+     <div class="form-things">
+       <label class="thing">Mail</label>
+     </div>
+     <%= f.email_field :email, class:"input-form", id:"#", placeholder:"PC・携帯どちらでも可"%>
+   </div>
+    <div class="input-things">
+      <div class="form-things">
+        <label class="thing">Password</label>
+     </div>
+     <%= f.password_field :password, class:"input-form", id:"#", placeholder:"6文字以上の半角英数字" %>
+      
+    </div>
+   <div class="input-things">
+      <div class="form-things">
+       <label class="thing">Password(confirmation)</label>
+     </div>
+      <%= f.password_field :password_confirmation, class:"input-form", id:"#", placeholder:"同じパスワードを入力して下さい" %>
+   </div>
+
+  <div class="input-things">
+    <div class="form-things">
+     <div class="thing">
+            Gender
+         <%= f.collection_select(:gender_id, Gender.all, :id, :name, {}, {class:"input-form"}) %>
+     </div>
+     </div>
+  <div class="input-things">
+     <div class="form-things">
+      <div class="thing">
+           Prefecture
+         <%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"input-form"}) %>
+      </div>
+    </div>
+    </div>
+
+   <div class='sign-up-bottun'>
+     <%= f.submit "Sign up",class:"sign-up-letter" %>
+    </div>
+</div>
+<% end %>
+
+<%= render "shared/just_logo" %>
