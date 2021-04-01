@@ -1,0 +1,31 @@
+
+<%= link_to image_tag("logo.png", class:"logo"), root_path %>
+
+<div class = "content_main">
+  <h2 class = "almost-title">Clothes edit</h2>
+  <%= form_with model: @clothe, local: true do |f| %>
+  
+  <div class = "image_content">
+    <%= image_tag @clothe.image, class: "image_size" %>
+  </div>
+  <div class="clothe-form">
+      <div class="clothe-things">
+        Category
+      </div>
+      <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"clothe-input-form", id:"clothe-category"}) %>
+      </div>
+      <div class = "clothe-form">
+        <div class="clothe-things">
+        Description
+      </div>
+      <%= f.text_area :description, class:"clothe-input-form", id:"clothe-info", placeholder:"Clothes details" ,maxlength:"1000" %>
+    </div> 
+    <div class="almost-button">
+      <%= f.submit "up date" ,class:"almost-letter" %>
+      </div>
+      <%=link_to 'Back', clothes_path, class:"clothe-button" %>
+  </div>
+
+
+  <% end %>
+</div>

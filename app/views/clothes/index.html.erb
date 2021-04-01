@@ -1,0 +1,28 @@
+<div class = "clothe-header">
+  <%= link_to image_tag("logo.png", class:"logo"), root_path %>
+  <%= link_to( new_clothe_path, class: 'post-btn') do %>
+    <span class='new-save-link'>New save</span>
+  <% end %>
+  <div class = "category-content">
+    <div class = category-search-form>
+<%= search_form_for @search, url: clothes_path do |f| %>
+      <div class = "category-search">
+      <%= f.collection_select :category_id_eq, Category.where.not(id: 0), :id, :name, include_blank: "Category search" %>
+      </div>
+     <%= f.submit "Search", class: "search-btn" %>
+<% end %>
+    </div>
+  </div>
+</div>
+
+<div class = "clothes-all">
+  <% @clothes.each do |clothe| %>
+        <%= link_to clothe_path(clothe.id) do %>
+        <div class='clothe-img-content'>
+          <%= image_tag(clothe.image, class: "clothes-img") %>
+        </div>
+    <% end %>
+  <% end %>
+
+
+

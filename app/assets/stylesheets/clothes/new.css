@@ -1,0 +1,48 @@
+
+
+.clothe-things {
+  display: flex;
+  justify-content: center;
+  background-image: -webkit-linear-gradient(linear, left top, right top, from(#93a5cf), to(#e4efe9));
+  background-image: -webkit-linear-gradient(left, #93a5cf 0%, #e4efe9 100%);
+  background-image: linear-gradient(to right, #93a5cf 0%, #e4efe9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding: 1.5vh;
+  font-family: 'Caveat', cursive;
+}
+
+.image-input-form {
+  margin-left: 10vw;
+  font-size: 12px;
+}
+
+.clothe-input-form {
+  font-family: 'Caveat', cursive;
+  display: flex;
+  border: solid 1px #93a5cf;
+  padding: 0 10vw
+}
+
+.clothe-input-form:hover {
+  -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, .3);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, .3);
+}
+
+.clothe-button {
+  font-family: 'Caveat', cursive;
+  display: flex;
+  justify-content: center;
+  background-image: -webkit-linear-gradient(linear, left top, right top, from(#93a5cf), to(#e4efe9));
+  background-image: -webkit-linear-gradient(left, #93a5cf 0%, #e4efe9 100%);
+  background-image: linear-gradient(to right, #93a5cf 0%, #e4efe9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border: solid 1px #93a5cf;
+  font-size: large;
+}
+
+.clothe-button:hover {
+  -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, .3);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, .3);
+}
