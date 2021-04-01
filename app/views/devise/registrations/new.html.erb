@@ -1,15 +1,16 @@
 <%= render "shared/just_logo" %>
 
+
 <%= form_with model: @user, url: user_registration_path, class: "sign-up-form", local: true do |f| %>
-<div class='area'>
-  <div class='sign-up-heading'>
+<div class='content_main'>
+  <div class='almost-title'>
     <h1 class='#'>
       Sign up
     </h1>
   </div>
 
   <%#= render 'shared/error_messages', model: f.object %>
-    <div class="input-things">
+    <div class="almost-things">
       <div class="form-things">
         <label class="thing">Nickname</label>
       </div>
@@ -51,8 +52,8 @@
     </div>
     </div>
 
-   <div class='sign-up-bottun'>
-     <%= f.submit "Sign up",class:"sign-up-letter" %>
+   <div class='almost-button'>
+     <%= f.submit "Sign up",class:"almost-letter" %>
     </div>
 </div>
 <% end %>

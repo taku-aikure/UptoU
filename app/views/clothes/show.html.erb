@@ -1,0 +1,30 @@
+
+<%= link_to image_tag("logo.png", class:"logo"), root_path %>
+
+<div class = "show_content">
+<div class="image_content">
+  <%= image_tag @clothe.image ,class:"image_size" %>
+</div>
+
+<div class="content_info">
+  <p class = "content_column">Category</p>
+  <div class="content_detail">
+    <%= @clothe.category.name %>
+  </div>
+</div>
+<div class="content_info">
+  <p class = "content_column">Description</p>
+  <div class="content_detail">
+    <%= @clothe.description %>
+  </div>
+</div>
+
+        
+        
+  <div class="clothe_manage">
+    <div class = "edit_space">
+      <%= link_to "編集する", edit_clothe_path(@clothe.id), class: :prototype__btn %>
+      </div>
+    <%= link_to "削除する", clothe_path(@clothe.id), method: :delete, class: :prototype__btn %>
+  </div>
+</div>

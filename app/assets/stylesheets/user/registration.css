@@ -1,4 +1,4 @@
-.area {
+.content_main {
   display: flex;
   align-items: center;
   padding-top: 10vh;
@@ -6,7 +6,7 @@
   height: 80vh;
 }
 
-.sign-up-heading {
+.almost-title {
   background-image: -webkit-gradient(linear, left top, right top, from(#93a5cf), to(#e4efe9));
   background-image: -webkit-linear-gradient(left, #93a5cf 0%, #e4efe9 100%);
   background-image: linear-gradient(to right, #93a5cf 0%, #e4efe9 100%);
@@ -16,7 +16,7 @@
   font-size: 50px;
 }
 
-.input-things {
+.almost-things {
   margin-top: 20px;
 } 
 
@@ -54,7 +54,7 @@
 
 
 
-.sign-up-bottun {
+.almost-button {
   display: flex;
   justify-content: center;
   margin: 40px;
@@ -67,7 +67,7 @@
   box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
 }
 
-.sign-up-letter {
+.almost-letter {
   background-image: -webkit-gradient(linear, left top, right top, from(#93a5cf), to(#e4efe9));
   background-image: -webkit-linear-gradient(left, #93a5cf 0%, #e4efe9 100%);
   background-image: linear-gradient(to right, #93a5cf 0%, #e4efe9 100%);
@@ -77,7 +77,7 @@
   font-size: 40px;
 }
 
-.sign-up-bottun:hover {
+.almost-button:hover {
   -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, .3);
   box-shadow: 0 5px 15px rgba(0, 0, 0, .3);
 }
