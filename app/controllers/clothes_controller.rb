@@ -41,9 +41,6 @@ class ClothesController < ApplicationController
     end
 
 
-
-
-
   private
 
   def clothe_params

@@ -15,5 +15,6 @@ class User < ApplicationRecord
   end
 
   has_many :clothes
+  has_many :posts
 
 end
