@@ -8,7 +8,11 @@ require("@rails/ujs").start()
 require("@rails/activestorage").start()
 require("channels")
 require('jquery')
-require('post.js')
+require('../post.js')
+require('../create.js')
+require('../destroy.js')
+require('../comment.js')
+require('bootstrap')
 // Uncomment to copy all static images under ../images to the output folder and reference
 // them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
 // or the `imagePath` JavaScript helper below.

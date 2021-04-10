@@ -4,6 +4,9 @@ Rails.application.routes.draw do
   devise_for :users
 
   resources :clothes
-  resources :posts
+  resources :posts do
+    resource :likes, only: [:create, :destroy]
+    resources :comments, only: [:create, :destroy]
+  end
 
 end

@@ -1,0 +1,16 @@
+<% if user_signed_in? %>
+    <% if current_user.already_liked?(@post) %>
+        <%= link_to post_likes_path(post), method: :delete, id: "like-button-#{post.id}", remote: true do %>
+                <i class="fab fa-gratipay fa-2x"></i>
+                <span class="fa-layers-counter" ><%= post.likes.count %></span>
+        <% end %>
+    <% else %>
+        <%= link_to post_likes_path(post), method: :post, id: "like-button-#{post.id}", remote: true do %>
+          <i class="fab fa-gratipay fa-2x"></i>
+          <span class="fa-layers-counter" ><%= post.likes.count %></span>
+        <% end %>
+    <% end %>
+<% else %>
+        <i class="fab fa-gratipay fa-2x"></i>
+    <span class="fa-layers-counter" ><%= post.likes.count %></span>
+<% end %>
