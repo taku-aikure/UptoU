@@ -16,13 +16,14 @@
 </div>
 
 <div class = "clothes-all">
+  <div class='clothe-img-content'>
   <% @clothes.each do |clothe| %>
-        <%= link_to clothe_path(clothe.id) do %>
-        <div class='clothe-img-content'>
-          <%= image_tag(clothe.image, class: "clothes-img") %>
-        </div>
+      <%= link_to clothe_path(clothe.id) do %>
+      <%= image_tag(clothe.image , class: "img-thumbnail")%>
     <% end %>
   <% end %>
+  </div>
+</div>
 
 
 

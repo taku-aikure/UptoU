@@ -48,10 +48,11 @@ header {
 }
 
 .contents {
-  background: linear-gradient(-45deg, rgba(171, 193, 247, 0.8), rgba(156, 241, 247, 0.8)),
-  url('top.jpeg');
+  // background: linear-gradient(-45deg, rgba(171, 193, 247, 0.8), rgba(156, 241, 247, 0.8)),
+  // url('top.jpeg');
   width: 100vw;
-  height: 100vh;
+  height: 70vh;
+  margin-top: 300px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top center;
