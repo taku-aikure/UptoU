@@ -2,6 +2,8 @@
 // present in this directory. You're encouraged to place your actual application logic in
 // a relevant structure within app/javascript and only use these pack files to reference
 // that code so it'll be compiled.
+// Enable jQuery in the .js.erb file
+global.$ = jQuery;
 
 require("@rails/ujs").start()
 // require("turbolinks").start()
@@ -9,8 +11,6 @@ require("@rails/activestorage").start()
 require("channels")
 require('jquery')
 require('../post.js')
-require('../create.js')
-require('../destroy.js')
 require('../comment.js')
 require('bootstrap')
 // Uncomment to copy all static images under ../images to the output folder and reference

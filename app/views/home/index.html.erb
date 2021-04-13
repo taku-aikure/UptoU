@@ -1,7 +1,7 @@
 <header>
   <div class="heading">
     <%= link_to image_tag("logo.png", class:"logo"), root_path %>
-  </div>
+  
   <div class="signs">
     <% if user_signed_in? %>
       <ul>
@@ -12,6 +12,7 @@
         <li><%= link_to 'sign up', new_user_registration_path, class: "sign-up" %></li>
       </ul>
     <% end %>
+  </div>
   </div>
 </header>
 

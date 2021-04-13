@@ -1,0 +1,57 @@
+.clothe-header {
+  display: flex;
+  width: 100vw;
+}
+
+.post-btn {
+  margin: 30px 5px 30px 50vw;
+  display: flex;
+  align-items: center;
+  font-family: 'Caveat', cursive;
+;
+}
+
+.category-content {
+  display: flex;
+}
+
+.category-search-form {
+  margin-top: 3vh;
+  margin-left: 8vw;
+  font-family: 'Suranna', serif;
+}
+
+.category-search {
+  border:  1px #93a5cf;
+}
+
+.search-btn {
+  flex: 1 1 auto;
+  margin: 12px;
+  padding: 10px;
+  text-align: center;
+}
+
+.clothes-all {
+  display: flex;
+  justify-content: center;
+}
+
+
+.clothe-img-content {
+  width: 90vw;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 10px;
+  row-gap: 1em;
+  background-image: url('dry1.jpg');
+  width: 100vw;
+  height: 100%;
+  background-repeat: repeat-y;
+  background-position: top center;
+  background-size: cover;
+}
+
+
+
+
