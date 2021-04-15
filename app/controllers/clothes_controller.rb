@@ -1,10 +1,12 @@
 class ClothesController < ApplicationController
   before_action :set_clothe, only: [:show, :edit, :update, :destroy]
+  before_action :move_to_root, only: [:edit, :update, :destroy]
 
   def index
     @clothes = Clothe.all
     @search = Clothe.ransack(params[:q])
     @clothes = @search.result
+    
   end
 
   def new
@@ -53,6 +55,10 @@ class ClothesController < ApplicationController
 
   def set_clothe
     @clothe = Clothe.find(params[:id])
+  end
+
+  def move_to_root
+    redirect_to root_path unless current_user.id == @clothe.user_id
   end
 
   
