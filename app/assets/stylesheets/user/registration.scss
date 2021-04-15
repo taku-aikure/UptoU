@@ -1,9 +1,8 @@
-.back-image {
+.signup_back_image {
   background: url('dry6.jpg');
   background-size: cover;
   background-position:center;
   height: 100vh;
-  
   -webkit-font-smoothing: antialiased;
   font: normal 14px Roboto,arial,sans-serif;
   font-family: 'Dancing Script', cursive!important;
@@ -31,6 +30,7 @@
   color:white;
   box-shadow:0 1px 0 #cfcfcf;
   margin: auto;
+  margin-top: 80px;
 }
 
 .form-control{

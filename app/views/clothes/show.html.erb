@@ -5,25 +5,22 @@
   <%= image_tag @clothe.image ,class:"img-thumbnail" %>
 </div>
 
-<div class="content_info">
-  <p class = "content_column">Category</p>
-  <div class="content_detail">
-    <%= @clothe.category.name %>
+<div class = content_range>
+<div class="content_cate">
+  <p>Category</p>
+  <p><%= @clothe.category.name %></p>
   </div>
-</div>
-<div class="content_info">
-  <p class = "content_column">Description</p>
-  <div class="content_detail">
-    <%= @clothe.description %>
+  <div class="content_desc">
+  <p>Description</p>
+  <p><%= @clothe.description %></p>
   </div>
 </div>
 
-        
-        
   <div class="clothe_manage">
     <div class = "edit_space">
-      <%= link_to "編集する", edit_clothe_path(@clothe.id), class: :prototype__btn %>
+      <%= link_to 'Back', clothes_path, class: :clothe_btn %>
+      <%= link_to "Edit", edit_clothe_path(@clothe.id), class: :clothe_btn %>
+      <%= link_to "Delete", clothe_path(@clothe.id), method: :delete, class: :clothe_btn %>
       </div>
-    <%= link_to "削除する", clothe_path(@clothe.id), method: :delete, class: :prototype__btn %>
   </div>
 </div>
