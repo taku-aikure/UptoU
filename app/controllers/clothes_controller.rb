@@ -1,6 +1,7 @@
 class ClothesController < ApplicationController
   before_action :set_clothe, only: [:show, :edit, :update, :destroy]
   before_action :move_to_root, only: [:edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:index, :show]
 
   def index
     @clothes = Clothe.all

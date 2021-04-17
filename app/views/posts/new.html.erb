@@ -1,38 +1,23 @@
-<%= link_to image_tag("logo.png", class:"logo"), root_path %>
-
-
-
+<div class = "new_post_back_image">
 <%= form_with model: @post, local: true do |f| %>
-
-<div class="content_main">
-  <div class = "almost-title">
-    New save
-  </div>
-    <div class="clothe-form">
-      <div class = "clothe-things">
-        Please&nbsp;
-        <p>
-          upload new item
-        </p>
+  <div class="container">
+    <div class = "row ">
+      <div class="offset-md-2 col-md-5 text-left ">
+        <div class="form-log"></br>
+          <h4 class = 'title-text'>New save</h4>
+          <label class = "form-control input-sm chat-input" >
+          <%= f.file_field :image, class: "new_clothe_image" %>
+          </label>
+          <%= f.collection_select(:season_id, Season.all, :id, :name, {:include_blank => "Season"}, {class:"form-control input-sm chat-input"}) %>
+          <%= f.text_area :detail, class: "form-control input-sm chat-input", placeholder:"detail",maxlength:"1000" %>
+          <div class = "wrapper">
+            <span class="new_clothe_btn">
+            <%=link_to 'Back', posts_path, class:"btn btn-danger btn-md" %>
+            <%= f.submit "New save" ,class:"btn btn-danger btn-md" %>
+            </span>
+          </div>
+        </div>
       </div>
-      <%= f.file_field :image, class:"image-input-form",id:"clothe-image" %>
     </div>
-    <div class="clothe-form">
-      <div class="clothe-things">
-        Season
-      </div>
-      <%= f.collection_select(:season_id, Season.all, :id, :name, {}, {class:"clothe-input-form", id:"clothe-category"}) %>
-      </div>
-      <div class = "clothe-form">
-        <div class="clothe-things">
-        detail
-      </div>
-      <%= f.text_area :detail, class:"clothe-input-form", id:"clothe-info", placeholder:"Clothes details" ,maxlength:"1000" %>
-    </div> 
-    <div class="almost-button">
-      <%= f.submit "new save" ,class:"almost-letter" %>
-      </div>
-      <%=link_to 'Back', posts_path, class:"clothe-button" %>
-    
+  <% end %>
 </div>
-<% end %>

@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
-
+  before_action :move_to_root, only: [:edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:index, :show]
   def index
     @posts = Post.all
     @search = Post.ransack(params[:q])
@@ -55,6 +56,10 @@ class PostsController < ApplicationController
 
   def set_post
     @post = Post.find(params[:id])
+  end
+
+  def move_to_root
+    redirect_to root_path unless current_user.id == @post.user_id
   end
 
 end

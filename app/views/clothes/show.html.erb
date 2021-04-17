@@ -1,4 +1,3 @@
-
 <div class = "show_content">
 <%= link_to image_tag("logo.png", class:"logo"), root_path %>
 <div class="image_content">
@@ -19,8 +18,11 @@
   <div class="clothe_manage">
     <div class = "edit_space">
       <%= link_to 'Back', clothes_path, class: :clothe_btn %>
+      <% if current_user == @clothe.user%>
+      <%= link_to 'Back', clothes_path, class: :clothe_btn %>
       <%= link_to "Edit", edit_clothe_path(@clothe.id), class: :clothe_btn %>
       <%= link_to "Delete", clothe_path(@clothe.id), method: :delete, class: :clothe_btn %>
+      <% end %>
       </div>
   </div>
 </div>

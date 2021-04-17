@@ -56,7 +56,7 @@
 
 | Column           | Type          | Options             |
 | ---------------- | ------------- | ------------------- |
-| type_id          | integer       | null: false         |
+| category_id      | integer       | null: false         |
 | description      | text          | null: false         |
 | user             | references    | foreign_key: true   |
 
@@ -84,6 +84,7 @@
 | Column           |Type           |Options              |
 | ---------------- | ------------- | ------------------- |
 | detail           | text          | null: false         |
+| season_id        | integer       | null: false         |
 | user             | references    | foreign_key: true   |
 
 ### Association

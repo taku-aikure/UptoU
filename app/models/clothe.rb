@@ -5,6 +5,7 @@ class Clothe < ApplicationRecord
 
   validates :image, presence: true
   validates :category_id, numericality: { other_than: 0 }
+  validates :description, presence: true
 
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :category

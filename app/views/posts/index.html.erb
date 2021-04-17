@@ -1,16 +1,15 @@
 <div class = "clothe-header">
   <%= link_to image_tag("logo.png", class:"logo"), root_path %>
   <%= link_to( new_post_path, class: 'post-btn') do %>
-    <span class='new-save-link'>New save</span>
+    <div class='new-save-link'>New save</div>
   <% end %>
-
   <div class = "category-content">
-    <div class = category-search-form>
+    <div class = "category-search-form">
 <%= search_form_for @search, url: posts_path do |f| %>
-      <div class = "category-search">
-      <%= f.collection_select :season_id_eq, Season.where.not(id: 1), :id, :name, include_blank: "Category search" %>
+      <div class = "season-search">
+      <%= f.collection_select :season_id_eq, Season.where.not(id: 1), :id, :name, include_blank: "Season search", class: "cate_btn" %>
+      <%= f.submit "Search", class: "btn btn-secondary" %>
       </div>
-     <%= f.submit "Search", class: "search-btn" %>
 <% end %>
     </div>
   </div>
@@ -20,17 +19,18 @@
   <div class="slider">
     <% @posts.each do |post| %>
       <%= link_to post_path(post.id) do %>
-      <%= image_tag (post.image) %>
+      <%= image_tag (post.image), class: "d-block w-100" %>
       <% end %>
     <% end %>
   </div>
 </div>
 
 <div class = "clothes-all">
+  <div class='clothe-img-content'>
   <% @posts.each do |post| %>
         <%= link_to post_path(post.id) do %>
-        <div class='clothe-img-content'>
-          <%= image_tag(post.image, class: "clothes-img") %>
-        </div>
+        <%= image_tag(post.image, class: "img-thumbnail") %>
     <% end %>
   <% end %>
+    </div>
+</div>

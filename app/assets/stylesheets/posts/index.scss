@@ -1,0 +1,29 @@
+.season-search {
+  display: flex;
+  border: solid 1px rgb(94, 59, 45);
+  width: 145px;
+  background-color: rgba(94, 59, 45, 0.5);
+}
+
+.previews {
+  width: 50vw;
+  height: 100%;
+}
+
+.slider {
+  left: 25vw;
+}
+
+.slick-prev {
+  font-family: 'Caveat', cursive;
+  color: rgb(94, 59, 45);
+  font-size: 20px;
+}
+
+.slick-next {
+  font-family: 'Caveat', cursive;
+  color: rgb(94, 59, 45);
+  font-size: 20px;
+}
+
+

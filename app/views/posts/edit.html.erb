@@ -1,30 +1,21 @@
-<%= link_to image_tag("logo.png", class:"logo"), root_path %>
-
-<div class = "content_main">
-  <h2 class = "almost-title">Clothes edit</h2>
+<div class = "post_edit">
+  <%= link_to image_tag("logo.png", class:"logo"), root_path %>
   <%= form_with model: @post, local: true do |f| %>
-  
-  <div class = "image_content">
-    <%= image_tag @post.image, class: "image_size" %>
+  <div class="image_content">
+    <%= image_tag @post.image ,class:"img-thumbnail" %>
   </div>
-  <div class="clothe-form">
-      <div class="clothe-things">
-        Category
+    <div class="offset-md-4 col-md-4 text-left ">
+      <div class="form-log"></br>
+          <h4 class = 'title-text'>Edit</h4>
+          <%= f.collection_select(:season_id, Season.all, :id, :name, {:include_blank => "Season"}, {class:"form-control input-sm chat-input"}) %>
+          <%= f.text_area :detail, class: "form-control input-sm chat-input", placeholder:"detail",maxlength:"1000" %>
+        <div class = "wrapper">
+          <span class="new_clothe_btn">
+          <%=link_to 'Back', post_path(@post.id), class:"btn btn-danger btn-md" %>
+          <%= f.submit "Save" ,class:"btn btn-danger btn-md" %>
+          </span>
+        </div>
       </div>
-      <%= f.collection_select(:season_id, Season.all, :id, :name, {}, {class:"clothe-input-form", id:"clothe-category"}) %>
-      </div>
-      <div class = "clothe-form">
-        <div class="clothe-things">
-        Description
-      </div>
-      <%= f.text_area :detail, class:"clothe-input-form", id:"clothe-info", placeholder:"Clothes details" ,maxlength:"1000" %>
-    </div> 
-    <div class="almost-button">
-      <%= f.submit "up date" ,class:"almost-letter" %>
-      </div>
-      <%=link_to 'Back', posts_path, class:"clothe-button" %>
-  </div>
-
-
+    </div>
   <% end %>
 </div>

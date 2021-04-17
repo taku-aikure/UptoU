@@ -1,51 +1,47 @@
+<div class = "post_show">
 <%= link_to image_tag("logo.png", class:"logo"), root_path %>
-
-<div class = "show_content">
-<div class="image_content">
-  <%= image_tag @post.image ,class:"image_size" %>
-</div>
-
-<div class="content_info">
-  <p class = "content_column">Category</p>
-  <div class="content_detail">
-    <%= @post.season.name %>
+  <div class="image_content">
+  <%= image_tag @post.image ,class:"img-thumbnail" %>
   </div>
-</div>
-<div class="content_info">
-  <p class = "content_column">Description</p>
-  <div class="content_detail">
-    <%= @post.detail %>
+
+<div class="content_range">
+  <div class = "content_cate">
+  <p>Season</p>
+  <p class = "season_position"><%= @post.season.name %></p>
+  </div>
+  <div class="content_desc">
+  <p>Description</p>
+  <p><%= @post.detail %><p>
   </div>
 </div>
 
-<div id="like-button">
+<div id="like-button", class="like-button">
   <%= render 'likes/like', post: @post %>
 </div>
-
-        
-        
   <div class="clothe_manage">
     <div class = "edit_space">
-      <%= link_to "編集する", edit_post_path(@post.id), class: :prototype__btn %>
+    <%= link_to 'Back', posts_path, class: :clothe_btn %>
+    <% if current_user == @post.user%>
+      <%= link_to 'Back', posts_path, class: :clothe_btn %>
+      <%= link_to "Edit", edit_post_path(@post.id), class: :clothe_btn %>
+      <%= link_to "Delete", post_path(@post.id), method: :delete, class: :clothe_btn %>
+      <% end %>
       </div>
-    <%= link_to "削除する", post_path(@post.id), method: :delete, class: :prototype__btn %>
   </div>
-</div>
-
 
 <div class="row">
     <ul>
-        <li class="comment-create">
-            <h3 class="text-left title">レビュー</h3>
-        </li>
-        <li id="comments_area">
-            <%= render partial: 'comments/index', locals: { comments: @comments } %>
-        </li>
+      <li class="comment-create">
+        <h3 class="text-left title">comment</h3>
+      </li>
+      <li id="comments_area">
+      <%= render partial: 'comments/index', locals: { comments: @comments } %>
+      </li>
     </ul>
     <hr>
     <% if user_signed_in? %>
         <div class="comment-create">
-            <h3 class="text-left">レビューを投稿する</h3>
+            <h3 class="text-left">Post comment</h3>
             <%= render partial: 'comments/form', locals: { comment: @comment, post: @post } %>
         </div>
     <% end %>
