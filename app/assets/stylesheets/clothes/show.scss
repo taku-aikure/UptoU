@@ -88,3 +88,21 @@
 .clothe_btn:hover {
   color: rgb(70, 92, 53);
 }
+
+.back_btn {
+  font-family: 'New Tegomin', serif;
+  position: relative;
+  z-index: 2;
+  background: url("dry7.jpg");
+  border: 1px solid rgb(109, 91, 91);
+  color: rgb(133, 61, 13);
+  line-height: 50px;
+  overflow: hidden;
+  padding: 6px 13px;
+  border-radius: 5px;
+  left: 8vw;
+}
+
+.back_btn:hover {
+  color: rgb(70, 92, 53);
+}

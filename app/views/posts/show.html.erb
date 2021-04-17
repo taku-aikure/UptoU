@@ -20,11 +20,12 @@
 </div>
   <div class="clothe_manage">
     <div class = "edit_space">
-    <%= link_to 'Back', posts_path, class: :clothe_btn %>
     <% if current_user == @post.user%>
       <%= link_to 'Back', posts_path, class: :clothe_btn %>
       <%= link_to "Edit", edit_post_path(@post.id), class: :clothe_btn %>
       <%= link_to "Delete", post_path(@post.id), method: :delete, class: :clothe_btn %>
+      <% else %>
+      <%= link_to 'Back', posts_path, class: :back_btn %>
       <% end %>
       </div>
   </div>

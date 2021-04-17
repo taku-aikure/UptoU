@@ -7,7 +7,6 @@ class ClothesController < ApplicationController
     @clothes = Clothe.all
     @search = Clothe.ransack(params[:q])
     @clothes = @search.result
-    
   end
 
   def new
