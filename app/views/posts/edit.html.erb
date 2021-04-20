@@ -7,6 +7,7 @@
     <div class="offset-md-4 col-md-4 text-left ">
       <div class="form-log"></br>
           <h4 class = 'title-text'>Edit</h4>
+          <%= render 'shared/error_messages', model: f.object %>
           <%= f.collection_select(:season_id, Season.all, :id, :name, {:include_blank => "Season"}, {class:"form-control input-sm chat-input"}) %>
           <%= f.text_area :detail, class: "form-control input-sm chat-input", placeholder:"detail",maxlength:"1000" %>
         <div class = "wrapper">

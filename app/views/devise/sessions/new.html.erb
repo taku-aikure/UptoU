@@ -6,6 +6,10 @@
         <div class = "offset-md-6 col-md-4 text-left">
           <div class="form-log"></br>
             <h4 class = 'title-text'>Sign in</h4>
+              <div class='login-flash-message'>
+                <%= flash[:notice] %>
+                <%= flash[:alert] %>
+              </div>
             <%= f.email_field :email, class:"form-control input-sm chat-input", placeholder:"Email" %>
             <%= f.password_field :password, class:"form-control input-sm chat-input", placeholder:"Password" %>
             <div class='wrapper'>

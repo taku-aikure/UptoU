@@ -5,6 +5,7 @@
       <div class="offset-md-2 col-md-5 text-left ">
         <div class="form-log"></br>
           <h4 class = 'title-text'>New save</h4>
+          <%= render 'shared/error_messages', model: f.object %>
           <label class = "form-control input-sm chat-input" >
           <%= f.file_field :image, class: "new_clothe_image" %>
           </label>
