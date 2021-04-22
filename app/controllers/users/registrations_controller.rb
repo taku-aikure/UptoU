@@ -8,7 +8,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   def new
     @results = Address.where('prefecture_id IN(?)', params[:prefecture_id], 'gender_id IN(?)', params[:gender_id])
   #   super
-  # end
+  end
 
   # POST /resource
   # def create
