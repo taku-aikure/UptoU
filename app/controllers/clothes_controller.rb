@@ -1,12 +1,14 @@
 class ClothesController < ApplicationController
   before_action :set_clothe, only: [:show, :edit, :update, :destroy]
   before_action :move_to_root, only: [:edit, :update, :destroy]
-  before_action :authenticate_user!, except: [:index, :show]
+  before_action :authenticate_user!
 
   def index
-    @clothes = Clothe.all
-    @search = Clothe.ransack(params[:q])
-    @clothes = @search.result
+    clothes = @clothes
+    @myclothes = current_user.clothes
+    @search = @myclothes.ransack(params[:q])
+    @myclothes = @search.result
+    
   end
 
   def new
@@ -36,12 +38,10 @@ class ClothesController < ApplicationController
     end
   end
 
-
     def destroy
       @clothe.destroy
       redirect_to clothes_path
     end
-
 
   private
 
@@ -61,6 +61,5 @@ class ClothesController < ApplicationController
     redirect_to root_path unless current_user.id == @clothe.user_id
   end
 
-  
 end
 
