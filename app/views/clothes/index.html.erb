@@ -17,9 +17,9 @@
 
 <div class = "clothes-all">
   <div class='clothe-img-content'>
-  <% @clothes.each do |clothe| %>
-      <%= link_to clothe_path(clothe.id) do %>
-      <%= image_tag(clothe.image , class: "img-thumbnail")%>
+  <% @myclothes.each do |myclothe| %>
+      <%= link_to clothe_path(myclothe.id) do %>
+      <%= image_tag(myclothe.image , class: "img-thumbnail")%>
     <% end %>
   <% end %>
   </div>
