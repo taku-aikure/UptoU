@@ -1,5 +1,5 @@
 current directory: /Users/takuya/Desktop/projects/UptoU/vendor/bundle/ruby/2.6.0/gems/racc-1.5.2/ext/racc/cparse
-/Users/takuya/.rbenv/versions/2.6.5/bin/ruby -I /Users/takuya/.rbenv/versions/2.6.5/lib/ruby/site_ruby/2.6.0 -r ./siteconf20210422-20611-11fnkmz.rb extconf.rb
+/Users/takuya/.rbenv/versions/2.6.5/bin/ruby -I /Users/takuya/.rbenv/versions/2.6.5/lib/ruby/site_ruby/2.6.0 -r ./siteconf20210422-21570-1gsgtft.rb extconf.rb
 checking for rb_ary_subseq()... *** extconf.rb failed ***
 Could not create Makefile due to some reason, probably lack of necessary
 libraries and/or headers.  Check the mkmf.log file for more details.  You may
