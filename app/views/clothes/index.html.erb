@@ -19,7 +19,7 @@
   <div class='clothe-img-content'>
   <% @myclothes.each do |myclothe| %>
       <%= link_to clothe_path(myclothe.id) do %>
-      <%= image_tag(myclothe.image , class: "img-thumbnail")%>
+      <%= image_tag(myclothe.image , class: "img-thum")%>
     <% end %>
   <% end %>
   </div>

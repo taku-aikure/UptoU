@@ -29,7 +29,7 @@
   <div class='clothe-img-content'>
   <% @posts.each do |post| %>
         <%= link_to post_path(post.id) do %>
-        <%= image_tag(post.image, class: "img-thumbnail") %>
+        <%= image_tag(post.image, class: "img-thum") %>
     <% end %>
   <% end %>
     </div>

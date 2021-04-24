@@ -63,3 +63,4 @@ gem 'image_processing', '~> 1.2'
 gem 'ransack'
 gem 'jquery-rails'
 gem 'uglifier'
+gem "aws-sdk-s3", require: false

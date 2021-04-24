@@ -9,7 +9,7 @@
             <%= render 'shared/error_messages', model: f.object %>
             <%= f.text_field :nickname, class:"form-control input-sm chat-input", placeholder:"Nickname", maxlength:"40" %>
             <%= f.email_field :email, class:"form-control input-sm chat-input", placeholder:"Email" %>
-            <%= f.password_field :password, class:"form-control input-sm chat-input", placeholder:"Password" %>
+            <%= f.password_field :password, class:"form-control input-sm chat-input", placeholder:"Password " %>
             <%= f.password_field :password_confirmation, class:"form-control input-sm chat-input", placeholder:"Password(confirmation)" %>
             <%= f.collection_select(:gender_id, Gender.all, :id, :name, {:include_blank => "Gender"}, {class:"form-control input-sm chat-input"}) %>
             <%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {:include_blank => "Prefecture"}, {class:"form-control input-sm chat-input"}) %>
